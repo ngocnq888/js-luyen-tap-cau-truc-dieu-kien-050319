@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuong Trinh Tinh Lai Ngan Hang</title>
+</head>
+<body>
+<h3>Chuong Trinh Tinh Lai Ngan Hang</h3>
+Nhap so tien gui
+<input type="text" id="tienGui">
+<br/>
+Nhap so nam muon gui :
+<input type="text" id="namGui">
+<br/>
+Lai % suat hang nam  :
+<input type="text" id="laiSuatnam">
+<br/>
+<button type="button" onclick="tienLai()"> Doi</button>
+<input id="result" type="text">
+<script>
+    function tienLai() {
+        var tienGui = parseFloat(document.getElementById("tienGui").value);
+        var namGui = document.getElementById("namGui").value ;
+        var laiSuatnam = parseFloat(document.getElementById("laiSuatnam").value)
+        var i = 0 ;
+        var tienLai = 0 ;
+
+        // Check tien gui
+        if (tienGui < 0){
+            alert(' Tien gui phai lon hon 0 !');
+
+
+        }
+
+        // Check nam gui
+
+        if(namGui != parseInt(namGui)){
+            alert('Nam gui tien phai la so nguyen !');
+        }
+
+        // Check lai suat nam
+
+        if (laiSuatnam < 0) {
+            alert(' Lai suat nam phai lon hon 0 !');
+        }
+
+        // Tinh tien gui
+        namGui = parseInt(namGui);
+        laiSuatnam += 1 ;
+        while(i< namGui){
+            tienLai = tienGui * laiSuatnam ;
+            tienGui = tienLai ;
+            i++ ;
+        }
+
+        result.value = tienLai ;
+
+
+    }
+</script>
+</body>
+</html>

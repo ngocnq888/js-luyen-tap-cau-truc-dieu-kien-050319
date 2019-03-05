@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Metter to Feet</title>
+</head>
+<body>
+<h3>Change Metter to Feet</h3>
+<input type="text" id="metter">
+<input type="button" value="Change !" onclick="changeFeet()" style="width: 50px; background:yellow;">
+<input type="text" id="feet" >
+<script>
+    function changeFeet(){
+        var change = document.getElementById("metter").value ;
+        change = eval(change *= 3.2808 )  ;
+    feet.value = change ;
+    }
+</script>
+</body>
+</html>

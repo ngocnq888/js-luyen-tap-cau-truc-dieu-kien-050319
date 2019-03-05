@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title><title>Giải Phương Trình Bậc 1</title>
+</head>
+<body>
+<h3>Giải Phương Trình Bậc 2</h3>
+Nhap bien a: <input id="biena" type="text"   />
+<br/>
+Nhap bien b:<input id="bienb" type="text"   />
+<br/>
+Nhap bien :<input id="bienc" type="text"   />
+<br/>
+<input id="change" type="button" value="Execute " onclick="tinhtoan()"  />
+<br/>
+Ket qua 1:
+<input id="result1" type="text"   />
+<br/>
+Ket qua 2:
+<input id="result2" type="text"   />
+<script>
+    function tinhtoan() {
+        var biena = eval(document.getElementById("biena").value);
+        var bienb = eval(document.getElementById("bienb").value);
+        var bienc = eval(document.getElementById("bienc").value);
+        var tinhtoan1 = null;
+        var tinhtoan2 = null;
+       var delta = (bienb*bienb) - (4*biena*bienc);
+        if (delta < 0) {
+
+                result1.value = result2.value = 'Phuong trinh Vo nghiem';
+
+        }
+        else if (delta == 0) {
+
+             tinhtoan1 = (bienb* -1)/(biena * 2);
+
+            result1.value = result2.value = 'Phuong trinh co nghiem kep' + tinhtoan1 ;
+            }
+            else {
+                tinhtoan1 = ((bienb * -1) + Math.sqrt(delta))/ (biena * 2);
+                tinhtoan2 = ((bienb * -1) - Math.sqrt(delta))/ (biena * 2);
+                result1.value = tinhtoan1 ;
+                result2.value = tinhtoan2 ;
+            }
+
+    }
+
+</script>
+</body>
+</html>

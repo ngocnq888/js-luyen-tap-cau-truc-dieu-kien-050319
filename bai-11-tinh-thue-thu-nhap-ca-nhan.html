@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương Trình Tính  Thu  Nhập Cá Nhan</title>
+</head>
+<body>
+Nhap Muc Luong cua Ban (don vi trieu VND) :
+<input id="luong" type="text" >
+<br/>
+Thoi Han Hop Dong :
+<select id="hopDong">
+    <option id="duoi3Thang" >Duoi 3 thang</option>
+    <option id="tren3Thang" >Tren 3 thang</option>
+</select>
+
+<br />
+<button onclick="tinhThue()">Tinh Thue</button>
+<br/>
+Thue phai dong la :
+<input id="result" type="text">
+<script>
+
+    function tinhThue() {
+        let hopDong = document.getElementById("hopDong").value ;
+        let luong = parseFloat(document.getElementById("luong").value);
+        let tinhThue = 0;
+        //Hop dong duoi 3 thang thi dong thue la 5%
+        if (hopDong == "Duoi 3 thang"){
+            tinhThue = parseFloat(luong * 0.9) ;
+            result.value = tinhThue ;
+
+        }
+        //Hop dong tren 3 thang thi dong thue theo muc luong ,10,15,20,25,30
+        else if (luong <= 5) {
+                tinhThue = parseFloat(luong * 0.95) ;
+                result.value = tinhThue ;
+
+            }
+            else if (luong <= 10) {
+                    tinhThue = parseFloat(luong * 0.90) - 0.25;
+                    result.value = tinhThue ;
+
+                }
+                else if (luong <=18){
+                        tinhThue = parseFloat(luong * 0.85) - 0.75;
+                        result.value = tinhThue ;
+                    }
+                    else if(luong <= 32){
+                            tinhThue = parseFloat(luong * 0.80) - 1.65;
+                            result.value = tinhThue ;
+                        }
+                        else if(luong <= 52){
+                                tinhThue = parseFloat(luong * 0.75) - 3.25;
+                                result.value = tinhThue ;
+                            }
+                            else if(luong <= 80){
+                                    tinhThue = parseFloat(luong * 0.70) - 5.85;
+                                    result.value = tinhThue ;
+                                }
+                                else {
+                                        tinhThue = parseFloat(luong * 0.65) - 9.85;
+                                        result.value = tinhThue ;
+                                    }
+
+
+    }
+
+</script>
+</body>
+</html>

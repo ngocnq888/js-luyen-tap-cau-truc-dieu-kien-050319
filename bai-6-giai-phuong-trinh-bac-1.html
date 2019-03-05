@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giải Phương Trình Bậc 1</title>
+</head>
+<body>
+<h3>Giải Phương Trình Bậc 1</h3>
+Nhap bien a: <input id="biena" type="text"   />
+<br/>
+Nhap bien b:<input id="bienb" type="text"   />
+<br/>
+<input id="change" type="button" value="Execute " onclick="tinhtoan()"  />
+<input id="result" type="text"   />
+<script>
+    function tinhtoan() {
+        var biena = eval(document.getElementById("biena").value);
+        var bienb = eval(document.getElementById("bienb").value);
+
+        if (biena == 0) {
+            if (bienb == 0) {
+                result.value += 'Vo so nghiem';
+            } else
+                result.value += 'Vo nghiem';
+        }
+        else {
+
+                var tinhtoan = null;
+                    tinhtoan = (bienb * -1)/biena;
+
+                result.value = tinhtoan ;
+            }
+
+    }
+
+</script>
+</body>
+</html>

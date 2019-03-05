@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh dien tinh hinh tam giac vuong khi biet 2 canh ke</title>
+</head>
+<body>
+<h3>Tinh dien tinh hinh chu nhat</h3>
+Nhap canh ke 1 cua tam giac:<input id="canh1" type="text"   />
+<br/>
+Nhap canh ke 2 cua tam giac:<input id="canh2" type="text"   />
+<br/>
+<input id="change" type="button" value="Execute " onclick="dientich()"  />
+<input id="result" type="text"   />
+<script>
+    function dientich() {
+        var canh1 = eval(document.getElementById("canh1").value);
+        var canh2 = eval(document.getElementById("canh2").value);
+        var dientich = (canh1 * canh2 )/2;
+        result.value = dientich ;
+
+
+    }
+
+</script>
+</body>
+</html>

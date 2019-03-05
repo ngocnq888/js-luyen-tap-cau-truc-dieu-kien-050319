@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra Tuoi</title>
+</head>
+<body>
+<input type="button" onclick="check()" value="Kiem tra">
+<script>
+    function check(){
+    let a = parseInt(prompt('Nhap tuoi cua ban '));
+    while ((a < 0) || (a > 120)){
+        alert('khong dung nhap lai !');
+    }
+
+    alert('tuoi cua ban la '+ a);
+    }
+</script>
+
+</body>
+</html>

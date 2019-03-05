@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change Temperature C to F</title>
+</head>
+<body>
+<h3>Change Temperature C to F</h3>
+<input type="text" id="doc">
+<input type="button" value="Đổi" onclick="changeTemperature()" style="width: 50px; background:yellow;">
+<br/>
+<br/>
+Nhiệt độ F tương ứng là:
+<input type="text" id="dof" >
+<script>
+    function changeTemperature(){
+    var x = document.getElementById('doc').value;
+    x = Number(x);
+    var y = ((x/5)*9) + 32;
+    document.getElementById("dof").value = y;
+}</script>
+
+</body>
+</html>

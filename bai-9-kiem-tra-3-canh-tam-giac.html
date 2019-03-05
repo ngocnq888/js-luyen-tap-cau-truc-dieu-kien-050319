@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiem tra 3 canh cua Tam Giac</title>
+</head>
+<body>
+<script>
+    let canh1 = parseFloat(prompt('Nhap canh thu 1 : '));
+    let canh2 = parseFloat(prompt('Nhap canh thu 2 : '));
+    let canh3 = parseFloat(prompt('Nhap canh thu 3 : '));
+    let sosanh1 = (canh1+canh2)>canh3;
+    let sosanh2 = (canh1+canh3)>canh2;
+    let sosanh3 = (canh3 + canh2) >canh1;
+    if ((sosanh1)&& (sosanh2) && (sosanh3))
+        alert(canh1 + ',' + canh2 +','+ canh3 +  'la canh cua tam gia !');
+    else
+        alert(canh1 + ',' + canh2 +','+ canh3 + 'khong phai la canh cua tam gia !');
+</script>
+</body>
+</html>
